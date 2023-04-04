@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'websocket-umusic'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DBA0D14D169147D7ABA280325E59ED16 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CFE3C2D66407419689DE40B0737E9F92 }}
           package: .
