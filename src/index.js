@@ -30,11 +30,11 @@ app.get('/', (req, res) => {
   res.send('hello from websocket server');
 });
 
-const Port = 4000;
+app.set('port', process.env.PORT || 5000);
 
 //listen to port
-const server = app.listen(Port, () => {
-  console.log(`Server is running on port ${Port}`);
+const server = app.listen(app.get('port'), () => {
+  console.log(`Server is running on port ${app.get('port')}`);
 });
 
 //socket io setup
