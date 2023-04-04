@@ -25,6 +25,11 @@ const corsOptions = {
 /* A middleware that enables cors. */
 app.use(cors(corsOptions));
 
+// respond with "hello" when a GET request is made to the homepage
+app.get('/', (req, res) => {
+  res.send('hello from websocket server');
+});
+
 const Port = 4000;
 
 //listen to port
