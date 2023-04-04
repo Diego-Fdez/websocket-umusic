@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 
 //cors configuration
-const whitelist = ['https://umusic7.vercel.app'];
+const whitelist = [process.env.FRONTEND_URL];
 
 /* A function that checks if the origin is in the whitelist. */
 const corsOptions = {
@@ -41,7 +41,7 @@ const server = app.listen(app.get('port'), () => {
 const io = new WebSocketServer(server, {
   pingTimeout: 60000,
   cors: {
-    origin: 'https://umusic7.vercel.app',
+    origin: process.env.FRONTEND_URL,
   },
 });
 
